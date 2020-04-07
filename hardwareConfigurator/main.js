@@ -7,10 +7,12 @@ function createWindow () {
   win = new BrowserWindow({
     width: 600,
     height: 600,
-    backgroundColor: '#ffffff'
+    backgroundColor: '#ffffff',
   });
 
-  win.loadUrl(`file://${__dirname}/dist/index.html`);
+  win.removeMenu();
+
+  win.loadURL(`file://${__dirname}/dist/hardwareConfigurator/index.html`);
 
   win.on('closed', () => win = null);
 
