@@ -5,8 +5,8 @@ let win;
 function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 600,
-    height: 600,
+    width: 1920,
+    height: 1080,
     backgroundColor: '#ffffff',
   });
 
@@ -16,7 +16,9 @@ function createWindow () {
 
   win.on('closed', () => win = null);
 
-  win.webContents.openDevTools()
+  win.webContents.openDevTools();
+
+  win.on('resize', () => win.webContents.openDevTools());
 }
 
 app.on('ready', createWindow);
