@@ -1,4 +1,4 @@
-<mat-horizontal-stepper (selectionChange)="navigate($event)" [linear]="true">
+<mat-horizontal-stepper (selectionChange)="navigate($event)" [linear]="true" #stepper>
   <mat-step *ngFor="let step of steps; let i = index"
     [routerLink]="step"
     (click)="navigate(step)">

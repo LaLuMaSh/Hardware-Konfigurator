@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatStepperModule } from '@angular/material/stepper';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PlatformComponent } from './Components/LocalComponents/platform/platform.component';
 import { CpuComponent } from './Components/LocalComponents/cpu/cpu.component';
@@ -19,6 +18,9 @@ import { DecorationComponent } from './Components/LocalComponents/decoration/dec
 import { SummaryComponent } from './Components/LocalComponents/summary/summary.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NaviagtionModule } from './Components/GlobalComponents/navigation/naviagtion.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,11 @@ import { NaviagtionModule } from './Components/GlobalComponents/navigation/navia
     NaviagtionModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatStepperModule,
     MatProgressSpinnerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    NgbModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

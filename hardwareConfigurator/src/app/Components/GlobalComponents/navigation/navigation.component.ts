@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatStepperService } from '../../../Services/mat-stepper.service';
+import { MatStepper } from '@angular/material/stepper';
 
 @Component({
   selector: 'app-navigation',
@@ -7,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+
+  @ViewChild('stepper', { static: true }) stepper: MatStepper;
 
   selectedStepIndex = 0;
 
@@ -24,7 +28,8 @@ export class NavigationComponent implements OnInit {
   ];
 
   constructor(
-    private router: Router
+    private router: Router,
+    private stepperService: MatStepperService,
   ) { }
 
   navigate(event): void {
@@ -34,5 +39,6 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.stepperService.proceedStep.subscribe(next => this.stepper.next());
   }
 }
