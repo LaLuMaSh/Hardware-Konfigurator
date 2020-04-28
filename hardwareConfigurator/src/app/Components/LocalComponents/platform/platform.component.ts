@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatStepperService } from '../../../Services/mat-stepper.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class PlatformComponent implements OnInit {
   intel = 'Intel';
   amd = 'AMD';
   canAdvance = false;
+  selectedPlatform;
 
   constructor(
     private matStepperService: MatStepperService
@@ -19,7 +20,6 @@ export class PlatformComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
   nextStep = () => {
@@ -29,5 +29,6 @@ export class PlatformComponent implements OnInit {
   writePlatform = (platform: string) => {
     localStorage.setItem('platform', platform);
     this.canAdvance = true;
+    this.selectedPlatform = localStorage.getItem('platform');
   }
 }

@@ -17,6 +17,9 @@ div {
 }
 
 mat-card {
+  .highlighted {
+    border: #69f0ae 5px solid;
+  }
   width: 30%;
 }
 
