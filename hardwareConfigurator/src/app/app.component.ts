@@ -7,4 +7,6 @@ import { Component, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
   title = 'hardwareConfigurator';
+
+  nextStep = new EventEmitter<boolean>();
 }
