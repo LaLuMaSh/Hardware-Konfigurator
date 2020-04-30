@@ -40,5 +40,6 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
     this.stepperService.proceedStep.subscribe(next => this.stepper.next());
+    this.stepperService.moveBack.subscribe(next => this.stepper.previous());
   }
 }

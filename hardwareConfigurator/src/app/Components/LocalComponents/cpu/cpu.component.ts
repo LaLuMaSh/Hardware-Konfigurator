@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CpuComponent implements OnInit {
 
+  title = 'Choose your CPU';
+
+  canAdvance = false;
+
   constructor() { }
 
   ngOnInit(): void {

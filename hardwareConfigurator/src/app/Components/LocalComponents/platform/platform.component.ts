@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatStepperService } from '../../../Services/mat-stepper.service';
+import { EvaluateSelectionService } from '../../../Services/evaluate-selection.service';
 
 @Component({
   selector: 'app-platform',
@@ -13,17 +14,19 @@ export class PlatformComponent implements OnInit {
   amd = 'AMD';
   canAdvance = false;
   selectedPlatform;
+  showBackwardsStep = false;
 
   constructor(
-    private matStepperService: MatStepperService
+    private matStepperService: MatStepperService,
+    private evaluateSelectionService: EvaluateSelectionService
   ) {
   }
 
   ngOnInit(): void {
-  }
-
-  nextStep = () => {
-    this.matStepperService.nextStep();
+    this.selectedPlatform = this.evaluateSelectionService.evaluateSelection('platform');
+    if (this.selectedPlatform) {
+      this.canAdvance = true;
+    }
   }
 
   writePlatform = (platform: string) => {

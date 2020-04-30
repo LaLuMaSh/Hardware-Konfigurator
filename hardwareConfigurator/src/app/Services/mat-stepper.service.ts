@@ -7,10 +7,15 @@ import { Subject } from 'rxjs';
 export class MatStepperService {
 
   proceedStep = new Subject<boolean>();
+  moveBack = new Subject<boolean>();
 
   constructor() { }
 
   nextStep = () => {
     this.proceedStep.next(true);
+  }
+
+  previousStep = () => {
+    this.moveBack.next(true);
   }
 }

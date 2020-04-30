@@ -21,6 +21,8 @@ import { NaviagtionModule } from './Components/GlobalComponents/navigation/navia
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MoveThroughProjectComponent } from './Components/Shared/move-through-project/move-through-project.component';
+import { ContentCardComponent } from './Components/Shared/content-card/content-card.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { MatButtonModule } from '@angular/material/button';
     PsuComponent,
     CaseComponent,
     DecorationComponent,
-    SummaryComponent
+    SummaryComponent,
+    MoveThroughProjectComponent,
+    ContentCardComponent,
   ],
   imports: [
     BrowserModule,

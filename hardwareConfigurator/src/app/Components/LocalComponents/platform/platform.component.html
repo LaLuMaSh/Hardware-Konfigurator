@@ -10,9 +10,5 @@
       {{ amd }}
     </button>
   </mat-card>
-
 </div>
-<div class="custom-container d-flex justify-content-center mt-5">
-  <button mat-button (click)="nextStep()" color="primary" class="nextStep" [disabled]="!canAdvance">Weiter</button>
-</div>
-
+<app-move-through-project [canAdvance]="canAdvance" [showBackwardsStep]="showBackwardsStep"></app-move-through-project>
