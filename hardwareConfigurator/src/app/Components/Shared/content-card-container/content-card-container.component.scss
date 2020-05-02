@@ -1,5 +1,8 @@
 .container {
   margin: 2em;
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
 }
 
 .center {

@@ -1,10 +1,10 @@
 <mat-card style="{{getHeight()}}">
   <button mat-button (click)="show()">
     <div *ngIf="!isSelected()">
-      <ng-content select="h1"></ng-content>
+      <ng-content select="app-content-card-front"></ng-content>
     </div>
     <div *ngIf="isSelected()">
-      <ng-content select="table"></ng-content>
+      <ng-content select="app-content-card-back"></ng-content>
     </div>
   </button>
 </mat-card>

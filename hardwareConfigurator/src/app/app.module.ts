@@ -24,6 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MoveThroughProjectComponent } from './Components/Shared/move-through-project/move-through-project.component';
 import { ContentCardComponent } from './Components/Shared/content-card/content-card.component';
 import { ContentCardContainerComponent } from './Components/Shared/content-card-container/content-card-container.component';
+import { ContentCardFrontComponent } from './Components/Shared/content-card-front/content-card-front.component';
+import { ContentCardBackComponent } from './Components/Shared/content-card-back/content-card-back.component';
 
 @NgModule({
     declarations: [
@@ -42,6 +44,8 @@ import { ContentCardContainerComponent } from './Components/Shared/content-card-
         MoveThroughProjectComponent,
         ContentCardComponent,
         ContentCardContainerComponent,
+        ContentCardFrontComponent,
+        ContentCardBackComponent,
     ],
   imports: [
     BrowserModule,

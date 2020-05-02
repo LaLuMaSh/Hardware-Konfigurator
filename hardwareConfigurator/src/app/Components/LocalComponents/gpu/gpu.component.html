@@ -1,1 +1,31 @@
-<p>gpu works!</p>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let gpu of GPUs" [container]="container" saveKey="cpu" [obj]="gpu" cardHeight="17">
+    <app-content-card-front>
+      <h1>{{gpu.name}}</h1>
+    </app-content-card-front>
+    <app-content-card-back>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><b>{{gpu.manufacturer}}</b> - {{gpu.name}}</td>
+        </tr>
+        <tr>
+          <td>Clock Frequency</td>
+          <td>{{gpu.frequency}}</td>
+        </tr>
+        <tr>
+          <td>Video Memory</td>
+          <td>{{gpu.videoMemory}}Gb {{gpu.videoMemoryType}}</td>
+        </tr>
+        <tr>
+          <td>Monitors</td>
+          <td>{{gpu.monitors}}</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>{{gpu.price}} CHF</td>
+        </tr>
+      </table>
+    </app-content-card-back>
+  </app-content-card>
+</app-content-card-container>

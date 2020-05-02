@@ -39,6 +39,6 @@ export class ContentCardComponent implements OnInit {
   }
 
   getHeight(): string {
-    return 'height: ' + this.cardHeight + 'em';
+    return 'height: ' + this.cardHeight + 'em;';
   }
 }
