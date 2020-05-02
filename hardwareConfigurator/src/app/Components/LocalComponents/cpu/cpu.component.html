@@ -1,5 +1,5 @@
 <app-content-card-container #container [title]="title">
-  <app-content-card *ngFor="let cpu of cpus" [container]="container" saveKey="cpu" [obj]="cpu">
+  <app-content-card *ngFor="let cpu of cpus" [container]="container" saveKey="cpu" [obj]="cpu" cardHeight="14">
     <h1>{{cpu.name}}</h1>
     <table>
       <tr>

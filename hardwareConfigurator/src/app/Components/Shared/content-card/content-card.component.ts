@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ContentCardContainerComponent } from '../content-card-container/content-card-container.component';
-import { UniqueObject } from '../../../Models/cpus';
+import { UniqueObject } from '../../../Models/uniqueObject';
 
 @Component({
   selector: 'app-content-card',
@@ -11,6 +11,7 @@ export class ContentCardComponent implements OnInit {
   @Input() obj: UniqueObject;
   @Input() container: ContentCardContainerComponent;
   @Input() saveKey: string;
+  @Input() cardHeight: number;
 
   constructor() {
   }
@@ -35,5 +36,9 @@ export class ContentCardComponent implements OnInit {
 
   getCardId(): string {
     return 'card-' + this.saveKey + '-' + this.obj?.id
+  }
+
+  getHeight(): string {
+    return 'height: ' + this.cardHeight + 'em';
   }
 }

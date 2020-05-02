@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card style="{{getHeight()}}">
   <button mat-button (click)="show()">
     <div *ngIf="!isSelected()">
       <ng-content select="h1"></ng-content>

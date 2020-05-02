@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Mainboard } from '../../../Models/mainboard';
 
 @Component({
   selector: 'app-mainboard',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainboardComponent implements OnInit {
 
+  title = 'Choose your Mainboard';
+  mainboards: Mainboard[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.mainboards = Mainboard.mainboards();
   }
-
 }

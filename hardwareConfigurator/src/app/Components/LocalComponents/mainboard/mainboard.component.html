@@ -1,1 +1,27 @@
-<p>mainboard works!</p>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let mainboard of mainboards" [container]="container" saveKey="mainboard" [obj]="mainboard" cardHeight="17">
+    <h1>{{mainboard.name}}</h1>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><b>{{mainboard.hersteller.toUpperCase()}}</b> - {{mainboard.name}}</td>
+      </tr>
+      <tr>
+        <td>Sockel</td>
+        <td>{{mainboard.sockel}}</td>
+      </tr>
+      <tr>
+        <td>RAM</td>
+        <td>{{mainboard.ramType}} - {{mainboard.ramSlots}} x, (max: {{mainboard.ramMax}})</td>
+      </tr>
+      <tr>
+        <td>Formfaktor</td>
+        <td>{{mainboard.formFaktor}}</td>
+      </tr>
+      <tr>
+        <td>Preis</td>
+        <td>{{mainboard.preis}} CHF</td>
+      </tr>
+    </table>
+  </app-content-card>
+</app-content-card-container>

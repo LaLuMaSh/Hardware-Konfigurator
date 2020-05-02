@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cpu } from '../../../Models/cpus';
+import { Cpu } from '../../../Models/cpu';
 
 @Component({
   selector: 'app-cpu',
@@ -9,8 +9,6 @@ import { Cpu } from '../../../Models/cpus';
 export class CpuComponent implements OnInit {
 
   title = 'Choose your CPU';
-
-  canAdvance = false;
   cpus: Cpu[];
 
   constructor() { }
