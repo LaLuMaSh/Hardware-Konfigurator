@@ -1,1 +1,31 @@
-<p>ram works!</p>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let ram of ram" [container]="container" saveKey="ram" [obj]="ram" cardHeight="17">
+    <app-content-card-front>
+      <h1>{{ram.name}}</h1>
+    </app-content-card-front>
+    <app-content-card-back>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><b>{{ram.manufacturer}}</b> - {{ram.name}}</td>
+        </tr>
+        <tr>
+          <td>Amount</td>
+          <td>{{ram.capacity}}Gb x {{ram.amount}}</td>
+        </tr>
+        <tr>
+          <td>Form Factor</td>
+          <td>{{ram.formFactor}}</td>
+        </tr>
+        <tr>
+          <td>Chip</td>
+          <td>{{ram.chip}}</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>{{ram.price}} CHF</td>
+        </tr>
+      </table>
+    </app-content-card-back>
+  </app-content-card>
+</app-content-card-container>

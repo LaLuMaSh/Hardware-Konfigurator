@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ram } from '../../../Models/Ram';
 
 @Component({
   selector: 'app-ram',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RamComponent implements OnInit {
 
-  constructor() { }
+  title = 'Choose your RAM';
+  ram: Ram[];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.ram = Ram.rams();
   }
+
 
 }

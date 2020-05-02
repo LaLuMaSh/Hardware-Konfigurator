@@ -1,5 +1,5 @@
 <app-content-card-container #container [title]="title">
-  <app-content-card *ngFor="let gpu of GPUs" [container]="container" saveKey="cpu" [obj]="gpu" cardHeight="17">
+  <app-content-card *ngFor="let gpu of GPUs" [container]="container" saveKey="gpu" [obj]="gpu" cardHeight="17">
     <app-content-card-front>
       <h1>{{gpu.name}}</h1>
     </app-content-card-front>
