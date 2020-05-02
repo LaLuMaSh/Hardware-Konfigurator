@@ -23,24 +23,26 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MoveThroughProjectComponent } from './Components/Shared/move-through-project/move-through-project.component';
 import { ContentCardComponent } from './Components/Shared/content-card/content-card.component';
+import { ContentCardContainerComponent } from './Components/Shared/content-card-container/content-card-container.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PlatformComponent,
-    CpuComponent,
-    MainboardComponent,
-    GpuComponent,
-    RamComponent,
-    StorageComponent,
-    CoolingComponent,
-    PsuComponent,
-    CaseComponent,
-    DecorationComponent,
-    SummaryComponent,
-    MoveThroughProjectComponent,
-    ContentCardComponent,
-  ],
+    declarations: [
+        AppComponent,
+        PlatformComponent,
+        CpuComponent,
+        MainboardComponent,
+        GpuComponent,
+        RamComponent,
+        StorageComponent,
+        CoolingComponent,
+        PsuComponent,
+        CaseComponent,
+        DecorationComponent,
+        SummaryComponent,
+        MoveThroughProjectComponent,
+        ContentCardComponent,
+        ContentCardContainerComponent,
+    ],
   imports: [
     BrowserModule,
     NaviagtionModule,

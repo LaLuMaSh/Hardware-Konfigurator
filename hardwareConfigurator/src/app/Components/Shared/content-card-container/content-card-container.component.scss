@@ -1,0 +1,17 @@
+.container {
+  margin: 2em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  .flex-items {
+    flex-direction: column;
+  }
+}
+
+.header {
+  margin: 2em;
+  font-size: 3em;
+  font-weight: bold;
+}

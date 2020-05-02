@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "hardwareConfigurator"
+  "defaultProject": "hardwareConfigurator",
+  "cli": {
+    "analytics": "c7999a7b-6c98-4d20-bc84-0a1a569539e1"
+  }
 }

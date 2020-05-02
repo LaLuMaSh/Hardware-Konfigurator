@@ -1,5 +1,23 @@
-<h1 class="m-xl-5">{{ title }}</h1>
-<div class="content">
-
-</div>
-<app-move-through-project [canAdvance]="canAdvance"></app-move-through-project>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let cpu of cpus" [container]="container" saveKey="cpu" [obj]="cpu">
+    <h1>{{cpu.name}}</h1>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td><b>{{cpu.platform.toUpperCase()}}</b> - {{cpu.name}}</td>
+      </tr>
+      <tr>
+        <td>Core</td>
+        <td>{{cpu.taktfrequenz}}GHz, {{cpu.cores}}-Core</td>
+      </tr>
+      <tr>
+        <td>Benchmark</td>
+        <td>{{cpu.benchmark}}</td>
+      </tr>
+      <tr>
+        <td>Preis</td>
+        <td>{{cpu.preis}} CHF</td>
+      </tr>
+    </table>
+  </app-content-card>
+</app-content-card-container>

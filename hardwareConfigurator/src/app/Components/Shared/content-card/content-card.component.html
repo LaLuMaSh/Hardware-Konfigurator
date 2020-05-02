@@ -1,3 +1,10 @@
 <mat-card>
-  <mat-card-header></mat-card-header>
+  <button mat-button (click)="show()">
+    <div *ngIf="!isSelected()">
+      <ng-content select="h1"></ng-content>
+    </div>
+    <div *ngIf="isSelected()">
+      <ng-content select="table"></ng-content>
+    </div>
+  </button>
 </mat-card>
