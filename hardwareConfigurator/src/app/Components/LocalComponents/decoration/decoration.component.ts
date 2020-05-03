@@ -8,7 +8,7 @@ import { Decoration } from '../../../Models/decoration';
 })
 export class DecorationComponent implements OnInit {
 
-  title = 'Choose your Cooling System';
+  title = 'Choose your Decorations';
   deco: Decoration[];
   constructor() { }
 
