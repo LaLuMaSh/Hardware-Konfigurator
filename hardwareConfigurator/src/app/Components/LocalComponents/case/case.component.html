@@ -1,1 +1,31 @@
-<p>case works!</p>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let pcCase of cases" [container]="container" saveKey="storage" [obj]="pcCase" cardHeight="17">
+    <app-content-card-front>
+      <h1>{{pcCase.name}}</h1>
+    </app-content-card-front>
+    <app-content-card-back>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><b>{{pcCase.manufacturer}}</b> - {{pcCase.name}}</td>
+        </tr>
+        <tr>
+          <td>Form Factor</td>
+          <td>{{pcCase.formFactor}}</td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td>{{pcCase.color}}</td>
+        </tr>
+        <tr>
+          <td>Material</td>
+          <td>{{pcCase.material}}</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>{{pcCase.price}} CHF</td>
+        </tr>
+      </table>
+    </app-content-card-back>
+  </app-content-card>
+</app-content-card-container>
