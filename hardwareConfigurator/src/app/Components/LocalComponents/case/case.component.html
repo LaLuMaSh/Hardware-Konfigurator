@@ -1,5 +1,5 @@
 <app-content-card-container #container [title]="title">
-  <app-content-card *ngFor="let pcCase of cases" [container]="container" saveKey="storage" [obj]="pcCase" cardHeight="17">
+  <app-content-card *ngFor="let pcCase of cases" [container]="container" saveKey="case" [obj]="pcCase" cardHeight="17">
     <app-content-card-front>
       <h1>{{pcCase.name}}</h1>
     </app-content-card-front>

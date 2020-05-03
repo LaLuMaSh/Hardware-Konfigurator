@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Storage } from '../../../Models/storage';
+import { Cooling } from '../../../Models/cooling';
 
 @Component({
   selector: 'app-cooling',
@@ -9,11 +9,11 @@ import { Storage } from '../../../Models/storage';
 export class CoolingComponent implements OnInit {
 
   title = 'Choose your Cooling System';
-  storages: Storage[];
+  cooling: Cooling[];
   constructor() { }
 
   ngOnInit(): void {
-    this.storages = Storage.storage();
+    this.cooling = Cooling.cooling();
   }
 
 }

@@ -1,7 +1,7 @@
 <app-content-card-container #container [title]="title">
-  <app-content-card *ngFor="let cooling of storages" [container]="container" saveKey="storage" [obj]="cooling" cardHeight="17">
+  <app-content-card *ngFor="let cooling of cooling" [container]="container" saveKey="cooling" [obj]="cooling" cardHeight="14">
     <app-content-card-front>
-      <h1>{{cooling.name}} ({{cooling.type.toUpperCase()}})</h1>
+      <h1>{{cooling.name}} ({{cooling.type}})</h1>
     </app-content-card-front>
     <app-content-card-back>
       <table>
@@ -10,16 +10,12 @@
           <td><b>{{cooling.manufacturer}}</b> - {{cooling.name}} ({{cooling.type}})</td>
         </tr>
         <tr>
-          <td>Amount</td>
-          <td>{{cooling.capacity}}Tb x {{cooling.amount}}</td>
+          <td>Fans</td>
+          <td>{{cooling.fans}}</td>
         </tr>
         <tr>
-          <td>Form Factor</td>
-          <td>{{cooling.formFactor}}</td>
-        </tr>
-        <tr>
-          <td>Interface</td>
-          <td>{{cooling.interface}}</td>
+          <td>Sockets</td>
+          <td>{{cooling.sockets}}</td>
         </tr>
         <tr>
           <td>Price</td>
