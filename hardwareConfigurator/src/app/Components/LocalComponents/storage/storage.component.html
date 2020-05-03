@@ -1,1 +1,31 @@
-<p>storage works!</p>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let storage of storages" [container]="container" saveKey="storage" [obj]="storage" cardHeight="17">
+    <app-content-card-front>
+      <h1>{{storage.name}} ({{storage.type.toUpperCase()}})</h1>
+    </app-content-card-front>
+    <app-content-card-back>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><b>{{storage.manufacturer}}</b> - {{storage.name}} ({{storage.type}})</td>
+        </tr>
+        <tr>
+          <td>Amount</td>
+          <td>{{storage.capacity}}Tb x {{storage.amount}}</td>
+        </tr>
+        <tr>
+          <td>Form Factor</td>
+          <td>{{storage.formFactor}}</td>
+        </tr>
+        <tr>
+          <td>Interface</td>
+          <td>{{storage.interface}}</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>{{storage.price}} CHF</td>
+        </tr>
+      </table>
+    </app-content-card-back>
+  </app-content-card>
+</app-content-card-container>
