@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Decoration } from '../../../Models/decoration';
 
 @Component({
   selector: 'app-decoration',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DecorationComponent implements OnInit {
 
+  title = 'Choose your Cooling System';
+  deco: Decoration[];
   constructor() { }
 
   ngOnInit(): void {
+    this.deco = Decoration.decorations();
   }
 
 }

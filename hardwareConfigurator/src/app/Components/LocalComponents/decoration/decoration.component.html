@@ -1,1 +1,31 @@
-<p>decoration works!</p>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let decoration of deco" [container]="container" saveKey="cooling" [obj]="decoration" cardHeight="17">
+    <app-content-card-front>
+      <h1>{{decoration.name}}</h1>
+    </app-content-card-front>
+    <app-content-card-back>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><b>{{decoration.manufacturer}}</b> - {{decoration.name}}</td>
+        </tr>
+        <tr>
+          <td>Length</td>
+          <td>{{decoration.length}}</td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td>{{decoration.color}}, {{decoration.lightColor}}</td>
+        </tr>
+        <tr>
+          <td>Material</td>
+          <td>{{decoration.material}}</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>{{decoration.price}} CHF</td>
+        </tr>
+      </table>
+    </app-content-card-back>
+  </app-content-card>
+</app-content-card-container>
