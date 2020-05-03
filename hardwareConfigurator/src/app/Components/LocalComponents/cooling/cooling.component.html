@@ -1,1 +1,31 @@
-<p>cooling works!</p>
+<app-content-card-container #container [title]="title">
+  <app-content-card *ngFor="let cooling of storages" [container]="container" saveKey="storage" [obj]="cooling" cardHeight="17">
+    <app-content-card-front>
+      <h1>{{cooling.name}} ({{cooling.type.toUpperCase()}})</h1>
+    </app-content-card-front>
+    <app-content-card-back>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><b>{{cooling.manufacturer}}</b> - {{cooling.name}} ({{cooling.type}})</td>
+        </tr>
+        <tr>
+          <td>Amount</td>
+          <td>{{cooling.capacity}}Tb x {{cooling.amount}}</td>
+        </tr>
+        <tr>
+          <td>Form Factor</td>
+          <td>{{cooling.formFactor}}</td>
+        </tr>
+        <tr>
+          <td>Interface</td>
+          <td>{{cooling.interface}}</td>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td>{{cooling.price}} CHF</td>
+        </tr>
+      </table>
+    </app-content-card-back>
+  </app-content-card>
+</app-content-card-container>
