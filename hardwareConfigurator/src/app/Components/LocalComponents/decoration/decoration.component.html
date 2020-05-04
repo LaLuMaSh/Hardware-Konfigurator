@@ -1,5 +1,5 @@
 <app-content-card-container #container [title]="title">
-  <app-content-card *ngFor="let decoration of deco" [container]="container" saveKey="cooling" [obj]="decoration" cardHeight="17">
+  <app-content-card *ngFor="let decoration of deco" [container]="container" saveKey="decoration" [obj]="decoration" cardHeight="17">
     <app-content-card-front>
       <h1>{{decoration.name}}</h1>
     </app-content-card-front>

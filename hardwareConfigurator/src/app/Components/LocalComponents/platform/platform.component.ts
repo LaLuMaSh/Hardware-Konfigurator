@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatStepperService } from '../../../Services/mat-stepper.service';
 import { EvaluateSelectionService } from '../../../Services/evaluate-selection.service';
 
@@ -23,15 +23,15 @@ export class PlatformComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedPlatform = this.evaluateSelectionService.evaluateSelection('platform');
+    this.selectedPlatform = JSON.parse(this.evaluateSelectionService.evaluateSelection('platform'));
     if (this.selectedPlatform) {
       this.canAdvance = true;
     }
   }
 
   writePlatform = (platform: string) => {
-    localStorage.setItem('platform', platform);
+    localStorage.setItem('platform', `{"name": "${platform}"}`);
     this.canAdvance = true;
-    this.selectedPlatform = localStorage.getItem('platform');
+    this.selectedPlatform = JSON.parse(localStorage.getItem('platform'));
   }
 }

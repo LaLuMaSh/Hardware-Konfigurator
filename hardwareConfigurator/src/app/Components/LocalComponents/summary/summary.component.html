@@ -1,1 +1,14 @@
-<p>summary works!</p>
+<div class="summary-card mt-5 d-flex justify-content-start">
+  <div>
+    <mat-card>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let item of items">
+            {{ item.name }}
+            <mat-divider></mat-divider>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -26,6 +26,7 @@ import { ContentCardComponent } from './Components/Shared/content-card/content-c
 import { ContentCardContainerComponent } from './Components/Shared/content-card-container/content-card-container.component';
 import { ContentCardFrontComponent } from './Components/Shared/content-card-front/content-card-front.component';
 import { ContentCardBackComponent } from './Components/Shared/content-card-back/content-card-back.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
     declarations: [
@@ -56,7 +57,8 @@ import { ContentCardBackComponent } from './Components/Shared/content-card-back/
     MatTooltipModule,
     NgbModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

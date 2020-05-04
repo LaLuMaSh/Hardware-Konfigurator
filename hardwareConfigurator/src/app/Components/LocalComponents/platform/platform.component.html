@@ -1,12 +1,12 @@
 <h1 class="m-xl-5">{{ title }}</h1>
 <div class="d-flex justify-content-between pt-5 selector">
   <mat-card #intelRef class="p-0">
-    <button mat-button class="option" [class.highlighted]="selectedPlatform === intel" (click)="writePlatform(intel)">
+    <button mat-button class="option" [class.highlighted]="selectedPlatform.name === intel" (click)="writePlatform(intel)">
       {{ intel }}
     </button>
   </mat-card>
   <mat-card #amdRef class="p-0">
-    <button mat-button class="option" [class.highlighted]="selectedPlatform === amd" (click)="writePlatform(amd)">
+    <button mat-button class="option" [class.highlighted]="selectedPlatform.name === amd" (click)="writePlatform(amd)">
       {{ amd }}
     </button>
   </mat-card>
